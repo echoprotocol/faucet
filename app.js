@@ -51,6 +51,7 @@ class Faucet {
             try {
                 await this.transfer(`1.2.${count - 1}`)
             } catch(e) {
+                console.error('transfer error');
                 console.error(e);
             }
         }
