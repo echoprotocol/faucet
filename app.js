@@ -1,10 +1,10 @@
-const appname = 'echo-faucet';
+const appname = 'echofaucet';
 const echo = require('echojs-lib');
 
 const conf = require('rc')(appname, {
     account: {
-        id: "1.2.188",
-        privateKey: "5KZ9H4ZEQoNVYQEPvtuW6R93ZGJFanZ3gPM9R2sPXTkgXRHkhbz",
+        id: "",
+        privateKey: "",
     },
     amount: {
         asset_id: '1.3.0',
@@ -48,7 +48,11 @@ class Faucet {
         const prevCount = this.count;
         this.count = count;
         for(let i = prevCount; i < count; i++) {
-            await this.transfer(`1.2.${count - 1}`)
+            try {
+                await this.transfer(`1.2.${count - 1}`)
+            } catch(e) {
+                console.error(e);
+            }
         }
     }
 
