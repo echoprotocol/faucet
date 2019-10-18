@@ -6,6 +6,7 @@
         "name": "PixelPlex Inc.",
         "email": "dev@pixelplex.io"
     },
+    "license": "MIT",
     "repository": {
         "url": "https://github.com/echoprotocol/faucet.git"
     },
