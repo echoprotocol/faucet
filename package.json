@@ -26,7 +26,7 @@
         "babel-preset-stage-0": "^6.24.1"
     },
     "dependencies": {
-        "echojs-lib": "^1.8.0",
+        "echojs-lib": "1.9.1-echo.13-rc.1",
         "rc": "^1.2.8"
     }
 }
